@@ -26,16 +26,15 @@ spilari1.append(43)
 random = sample(range(52),52)
 randListi1 = []
 randListi2 = []
-print(random)
 teljari = 0
 for x in random:
     if teljari < 26:
-        randListi1.append(31)
+        randListi1.append(x)
     else:
         randListi2.append(x)
     teljari = teljari + 1
 
-print(randListi1,"\n")
+print(randListi1)
 print(randListi2,"\n")
 print("-------------------------")
 teljari2 = 0
