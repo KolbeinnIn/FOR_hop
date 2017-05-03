@@ -37,11 +37,13 @@ for x in random:
 
 print(randListi1)
 print(randListi2,"\n")
+print(listi1[32])
 print("---------Notandi---------")
 teljari2 = 0
 x=0
 teljariGera = 0
-while len(randListi1)>0 and len(randListi2)>0:
+while len(randListi1)>0 and len(randListi2)>0 and x !=52:
+
     rollur = eval(listi1[randListi1[x]])
     for key, value in rollur.items():
         print(key)
@@ -74,7 +76,7 @@ while len(randListi1)>0 and len(randListi2)>0:
         t7 = value[6]
         t8 = value[7]
     if teljariGera % 2 == 0:
-        svar = int(input("Sláðu inn tölu 1-8: "))
+        svar = 1 #int(input("Sláðu inn tölu 1-8: "))
     else:
         svar = randint(1,8)
     if svar == 1:
@@ -85,8 +87,10 @@ while len(randListi1)>0 and len(randListi2)>0:
         elif s1 == t1:
             print("Jafntefli, tölvan var með =",t1,"þú ert með", s1)
             listi2.append(randListi2[x])
+            print(listi2)
         else:
             print("Tölvan vann, tölvan er með =", t1, "þú ert með", s1)
+            teljariGera = teljariGera + 1
         val = s1
     elif svar == 2:
         print("Þú hefur valið: Mjólkun")
@@ -95,6 +99,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t2, "þú ert með", s2)
+            teljariGera = teljariGera + 1
         val = s2
     elif svar == 3:
         print("Þú hefur valið: Einkunn ullar")
@@ -103,6 +108,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t3, "þú ert með", s3)
+            teljariGera = teljariGera + 1
         val = s3
     elif svar == 4:
         print("Þú hefur valið: Fjöldi afkvæma")
@@ -111,6 +117,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t4, "þú ert með", s4)
+            teljariGera = teljariGera + 1
         val = s4
     elif svar == 5:
         print("Þú hefur valið: Einkunn læris")
@@ -119,6 +126,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t5, "þú ert með", s5)
+            teljariGera = teljariGera + 1
         val = s5
     elif svar == 6:
         print("Þú hefur valið: Frjósemi")
@@ -127,6 +135,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t6, "þú ert með", s6)
+            teljariGera = teljariGera + 1
         val = s6
     elif svar == 7:
         print("Þú hefur valið: Þykkt bakvöðva")
@@ -135,6 +144,7 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t7, "þú ert með", s7)
+            teljariGera = teljariGera + 1
         val = s7
     elif svar == 8:
         print("Þú hefur valið: Einkunn fyrir malir")
@@ -143,9 +153,13 @@ while len(randListi1)>0 and len(randListi2)>0:
             teljariGera = teljariGera + 1
         else:
             print("Tölvan vann, tölvan er með =", t8, "þú ert með", s8)
+            teljariGera = teljariGera + 1
         val = s8
     print("")
-    x+=1
+    if x <= 51:
+        x += 1
+    else:
+        a = 0
     teljariGera = teljariGera + 1
 print(listi2)
 
