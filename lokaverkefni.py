@@ -252,6 +252,7 @@ while len(randListi1)>0 and len(randListi2)>0:
         del(jafnListi[:])
     print(randListi1)
     print(randListi2)
+    print("X =",x)
     print("")
     if x < 25:
         x += 1
