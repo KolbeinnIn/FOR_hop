@@ -14,15 +14,6 @@ with open("skra.txt", "r", encoding="ISO-8859-1") as skra:
     skra1 = skra.read().split('\n')
     listi1 = skra1
 
-'''
-teljari = 0
-for key, value in rollur.items():
-    dict1[teljari] = key
-    teljari = teljari + 1
-
-print(dict1)
-'''
-
 random = sample(range(52),52)    #52 random tölur upp í 52 en samt aldrei sama talan
 randListi1 = []
 randListi2 = []
@@ -37,7 +28,7 @@ for x in random:                #For lykkja sem setur tölurnar (spilin) í 2 li
 teljari2 = 0
 x = 0
 x2 = 0
-teljariGera = 0
+teljariGera = 2
 jafnListi = []
 while len(randListi1)>0 and len(randListi2)>0:
     rollur = eval(listi1[randListi1[x]])
@@ -71,7 +62,7 @@ while len(randListi1)>0 and len(randListi2)>0:
         t6 = value[5]
         t7 = value[6]
         t8 = value[7]
-    if teljariGera % 2 == 0:
+    if teljariGera == 2:
         svar = int(input("Sláðu inn tölu 1-8: "))
         print("▼---------Notandi---------▼")
     else:
@@ -81,11 +72,11 @@ while len(randListi1)>0 and len(randListi2)>0:
         print("Þú hefur valið: Þyngd")
         if s1 > t1:
             print("Þú vannst, tölvan er með =", t1, "þú ert með", s1)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s1 == t1:
             print("Jafntefli, tölvan var með =",t1,"þú ert með", s1)
@@ -93,20 +84,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t1, "þú ert með", s1)
+            teljariGera = 1
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             randListi2.append(randListi1[x])
             del(randListi1[x])
     elif svar == 2:
         print("Þú hefur valið: Mjólkun")
         if s2 > t2:
             print("Þú vannst, tölvan er með =", t2, "þú ert með", s2)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s2 == t2:
             print("Jafntefli, tölvan var með =",t2,"þú ert með", s2)
@@ -114,20 +106,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t2, "þú ert með", s2)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 3:
         print("Þú hefur valið: Einkunn ullar")
         if s3 > t3:
             print("Þú vannst, tölvan er með =", t3, "þú ert með", s3)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s3 == t3:
             print("Jafntefli, tölvan var með =",t3,"þú ert með", s3)
@@ -135,20 +128,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t3, "þú ert með", s3)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 4:
         print("Þú hefur valið: Fjöldi afkvæma")
         if s4 > t4:
             print("Þú vannst, tölvan er með =", t4, "þú ert með", s4)
-            teljariGera = teljariGera + x
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s4 == t4:
             print("Jafntefli, tölvan var með =",t4,"þú ert með", s4)
@@ -156,20 +150,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t4, "þú ert með", s4)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 5:
         print("Þú hefur valið: Einkunn læris")
         if s5 > t5:
             print("Þú vannst, tölvan er með =", t5, "þú ert með", s5)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s5 == t5:
             print("Jafntefli, tölvan var með =",t5,"þú ert með", s5)
@@ -177,20 +172,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t5, "þú ert með", s5)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 6:
         print("Þú hefur valið: Frjósemi")
         if s6 > t6:
             print("Þú vannst, tölvan er með =", t6, "þú ert með", s6)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s6 == t6:
             print("Jafntefli, tölvan var með =",t6,"þú ert með", s6)
@@ -198,20 +194,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t6, "þú ert með", s6)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 7:
         print("Þú hefur valið: Þykkt bakvöðva")
         if s7 > t7:
             print("Þú vannst, tölvan er með =", t7, "þú ert með", s7)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s7 == t7:
             print("Jafntefli, tölvan var með =",t7,"þú ert með", s7)
@@ -219,20 +216,21 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t7, "þú ert með", s7)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     elif svar == 8:
         print("Þú hefur valið: Einkunn fyrir malir")
         if s8 > t8:
             print("Þú vannst, tölvan er með =", t8, "þú ert með", s8)
-            teljariGera = teljariGera + 1
+            teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[0])
-                randListi1.append(jafnListi[x])
+                randListi1.append(jafnListi[:])
+                
             del(randListi2[x2])
         elif s8 == t8:
             print("Jafntefli, tölvan var með =",t8,"þú ert með", s8)
@@ -240,14 +238,15 @@ while len(randListi1)>0 and len(randListi2)>0:
             jafnListi.append(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t8, "þú ert með", s8)
+            teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
                 randListi2.append(jafnListi[0])
-                randListi2.append(jafnListi[x])
+                
             del(randListi1[x])
     else:
         print("Rangur innsláttur, reyndu aftur")
-        teljariGera = teljariGera - 1
+        x = x - 1
     if len(jafnListi) > 0:
         del(jafnListi[:])
     print("")
@@ -263,9 +262,6 @@ while len(randListi1)>0 and len(randListi2)>0:
         x2 = 0
     else:
         x2 += 1
-
-
-    teljariGera = teljariGera + 1
 if len(randListi1) == 0:
     print("Tölvan vann")
 if len(randListi2) == 0:
