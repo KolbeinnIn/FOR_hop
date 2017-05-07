@@ -248,10 +248,10 @@ while len(randListi1)>0 and len(randListi2)>0:
             del(randListi1[x])
     else:
         print("Rangur innsláttur, reyndu aftur")
-    print(jafnListi)
     if len(jafnListi) > 0:
         del(jafnListi[:])
-    print(jafnListi)
+    print(randListi1)
+    print(randListi2)
     print("")
     if x < 25:
         x += 1
