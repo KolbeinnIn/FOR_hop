@@ -1,6 +1,6 @@
-# Kolbeinn Ingólfsson
-# 24.4.2017
-# Lokaverkefni - Hrúta...uh..thing
+#Kolbeinn Ingólfsson og Kristberg Rúnar Pálson
+#24.4.2017
+#Lokaverkefni - Hrútaspil
 
 from random import *
 
@@ -23,11 +23,11 @@ for key, value in rollur.items():
 print(dict1)
 '''
 
-random = sample(range(52),52)
+random = sample(range(52),52)    #52 random tölur upp í 52 en samt aldrei sama talan
 randListi1 = []
 randListi2 = []
 teljari = 0
-for x in random:
+for x in random:                #For lykkja sem setur tölurnar (spilin) í 2 lista
     if teljari < 26:
         randListi1.append(x)
     else:
@@ -286,139 +286,3 @@ if len(randListi2) == 0:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""for x in randListi2:
-    rollur = eval(listi1[x])
-    for key, value in rollur.items():
-        print(key)
-        print("1. Þyngd               ", value[0])
-        print("2. Mjólkun             ", value[x])
-        print("3. Einkunn ullar       ", value[2])
-        print("4. Fjöldi afkvæma      ", value[3])
-        print("5. Einkunn læris       ", value[4])
-        print("6. Frjósemi            ", value[5])
-        print("7. Þykkt bakvöðva      ", value[6])
-        print("8. Einkunn fyrir malir ", value[7])
-        t1 = value[0]
-        t2 = value[x]
-        t3 = value[2]
-        t4 = value[3]
-        t5 = value[4]
-        t6 = value[5]
-        t7 = value[6]
-        t8 = value[7]
-        svar = randint(1,8)
-        print(svar)
-        if svar == 1:
-            print("Þú hefur valið: Þyngd")
-            val = t1
-        elif svar == 2:
-            print("Þú hefur valið: Mjólkun")
-            val = t2
-        elif svar == 3:
-            print("Þú hefur valið: Einkunn ullar")
-            val = t3
-        elif svar == 4:
-            print("Þú hefur valið: Fjöldi afkvæma")
-            val = t4
-        elif svar == 5:
-            print("Þú hefur valið: Einkunn læris")
-            val = t5
-        elif svar == 6:
-            print("Þú hefur valið: Frjósemi")
-            val = t6
-        elif svar == 7:
-            print("Þú hefur valið: Þykkt bakvöðva")
-            val = t7
-        elif svar == 8:
-            print("Þú hefur valið: Einkunn fyrir malir")
-            val = t8
-        print("")
-print("-------------------------")
-
-
-
-
-teljariEh = 0
-for x in randListi1:
-
-    if teljariEh % 2 == 0:
-        rollur = eval(listi1[teljariEh])
-
-    else:
-        rollur2 = eval(listi1[teljariEh])
-
-    teljariEh = teljariEh + 1
-    for key, value in rollur.items():
-        print(key)
-        print("1. Þyngd               ", value[0])
-        print("2. Mjólkun             ", value[x])
-        print("3. Einkunn ullar       ", value[2])
-        print("4. Fjöldi afkvæma      ", value[3])
-        print("5. Einkunn læris       ", value[4])
-        print("6. Frjósemi            ", value[5])
-        print("7. Þykkt bakvöðva      ", value[6])
-        print("8. Einkunn fyrir malir ", value[7])
-        s1 = value[0]
-        s2 = value[x]
-        s3 = value[2]
-        s4 = value[3]
-        s5 = value[4]
-        s6 = value[5]
-        s7 = value[6]
-        s8 = value[7]
-        svar = int(input("Sláðu inn tölu 1-8: "))
-        if svar == 1:
-            print("Þú hefur valið: Þyngd")
-            val = s1
-        elif svar == 2:
-            print("Þú hefur valið: Mjólkun")
-            val = s2
-        elif svar == 3:
-            print("Þú hefur valið: Einkunn ullar")
-            val = s3
-        elif svar == 4:
-            print("Þú hefur valið: Fjöldi afkvæma")
-            val = s4
-        elif svar == 5:
-            print("Þú hefur valið: Einkunn læris")
-            val = s5
-        elif svar == 6:
-            print("Þú hefur valið: Frjósemi")
-            val = s6
-        elif svar == 7:
-            print("Þú hefur valið: Þykkt bakvöðva")
-            val = s7
-        elif svar == 8:
-            print("Þú hefur valið: Einkunn fyrir malir")
-            val = s8
-        print("")
-
-rollur = eval(skra1[11])
-for key, value in rollur.items():
-    print(key)
-    print("þyngd ", value[0])
-    print("mjólkun", value[x])"""
