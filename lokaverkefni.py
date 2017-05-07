@@ -34,8 +34,6 @@ for x in random:                #For lykkja sem setur tölurnar (spilin) í 2 li
         randListi2.append(x)
     teljari = teljari + 1
 
-print(randListi1)
-print(randListi2,"\n")
 teljari2 = 0
 x = 0
 x2 = 0
@@ -75,10 +73,10 @@ while len(randListi1)>0 and len(randListi2)>0:
         t8 = value[7]
     if teljariGera % 2 == 0:
         svar = int(input("Sláðu inn tölu 1-8: "))
-        print("---------Notandi---------")
+        print("▼---------Notandi---------▼")
     else:
         svar = randint(1,8)
-        print("----------Tölva----------")
+        print("▼----------Tölva----------▼")
     if svar == 1:
         print("Þú hefur valið: Þyngd")
         if s1 > t1:
@@ -252,13 +250,10 @@ while len(randListi1)>0 and len(randListi2)>0:
         teljariGera = teljariGera - 1
     if len(jafnListi) > 0:
         del(jafnListi[:])
-    print(randListi1)
-    print(randListi2)
-    print(len(randListi1))
-    print(len(randListi2))
-    print("X =",x)
-    print("X2 =", x2)
     print("")
+    print("Tölvan er með", len(randListi2), "spil á hendi")
+    print("Þú ert með", len(randListi1), "spil á hendi")
+
     if x+1 >= len(randListi1):
         x = 0
     else:
@@ -268,6 +263,7 @@ while len(randListi1)>0 and len(randListi2)>0:
         x2 = 0
     else:
         x2 += 1
+
 
     teljariGera = teljariGera + 1
 if len(randListi1) == 0:
