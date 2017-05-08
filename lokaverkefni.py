@@ -73,21 +73,25 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
-
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
             del (randListi2[x2])
         elif s1 == t1:
             print("Jafntefli, tölvan var með =", t1, "þú ert með", s1)
             jafnListi.append(randListi1[x])
             jafnListi.append(randListi2[x2])
             del(randListi1[x])
-            del (randListi2[x2])
+            del(randListi2[x2])
         else:
             print("Tölvan vann, tölvan er með =", t1, "þú ert með", s1)
             teljariGera = 1
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
-
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
             randListi2.append(randListi1[x])
             del (randListi1[x])
     elif svar == 2:
@@ -97,7 +101,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s2 == t2:
@@ -111,7 +118,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 3:
@@ -121,7 +131,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s3 == t3:
@@ -135,7 +148,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 4:
@@ -145,7 +161,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s4 == t4:
@@ -159,7 +178,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 5:
@@ -169,7 +191,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s5 == t5:
@@ -183,7 +208,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 6:
@@ -193,7 +221,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s6 == t6:
@@ -207,7 +238,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 7:
@@ -217,7 +251,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s7 == t7:
@@ -231,7 +268,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi1[x])
     elif svar == 8:
@@ -241,7 +281,10 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 2
             randListi1.append(randListi2[x2])
             if len(jafnListi) > 0:
-                randListi1.append(jafnListi[:])
+                randListi1.append(jafnListi[0])
+                randListi1.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
 
             del (randListi2[x2])
         elif s8 == t8:
@@ -255,17 +298,19 @@ while len(randListi1) > 0 and len(randListi2) > 0:
             teljariGera = 1
             randListi2.append(randListi1[x])
             if len(jafnListi) > 0:
-                randListi2.append(jafnListi[:])
-
+                randListi2.append(jafnListi[0])
+                randListi2.append(jafnListi[1])
+                del(jafnListi[0])
+                del(jafnListi[0])
             del (randListi1[x])
     else:
         print("Rangur innsláttur, reyndu aftur")
         x = x - 1
-    if len(jafnListi) > 0:
-        del (jafnListi[:])
+
     print("")
     print("Tölvan er með", len(randListi2), "spil á hendi")
     print("Þú ert með", len(randListi1), "spil á hendi")
+    print(len(jafnListi),"spil eru til hliðar")
 
     if x + 1 >= len(randListi1):
         x = 0
@@ -276,6 +321,7 @@ while len(randListi1) > 0 and len(randListi2) > 0:
         x2 = 0
     else:
         x2 += 1
+
 if len(randListi1) == 0:
     print("Tölvan vann")
 if len(randListi2) == 0:
