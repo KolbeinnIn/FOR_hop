@@ -9,7 +9,7 @@ spilari1 = []
 dict2 = {}
 listi1 = []
 
-with open("skra.txt", "r", encoding="ISO-8859-1") as skra:
+with open("skra.txt", "r", encoding="ISO-8859-1") as skra:  #skjalið sem geymir spilin opnast og spilin settí í lista
     skra1 = skra.read().split('\n')
     listi1 = skra1
 
@@ -328,3 +328,5 @@ while len(randListi1) > 0 and len(randListi2) > 0:          #while lykkja sem he
     if len(randListi2) == 0:
         print("Þú vannst")
         break
+    import time
+    time.sleep(2)
